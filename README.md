@@ -26,8 +26,6 @@ FluentFlow is a web application designed to assist users in enhancing their publ
 ## Contribution
 Feel free to open issues and submit pull requests to improve FluentFlow. We welcome contributions from the community!
 
-## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
-Developed by **[Your Name]** in collaboration with **Damascus University**.
+Developed by ** Alya Almsouti-Hamza Mahrous-Osama BAzo-Yassin Abdulmahdi ** in collaboration with **Damascus University**.
