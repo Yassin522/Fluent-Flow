@@ -24,3 +24,9 @@ FluentFlow is a web application designed to assist users in enhancing their publ
 
 ---
 Developed by **[Alya Almsouti-Hamza Almahrous-Osama Bazo-Yassin Abdulmahdi]** in collaboration with **Damascus University**.
+---
+
+## Demo
+
+https://github.com/user-attachments/assets/9c16801a-1907-4990-9fc2-df3a31613951
+
