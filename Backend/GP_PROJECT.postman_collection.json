@@ -1,0 +1,1254 @@
+{
+	"info": {
+		"_postman_id": "66ef443e-1875-44ba-8e41-5508e1c6a73f",
+		"name": "GP_PROJECT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18447671",
+		"_collection_link": "https://alya-msouti.postman.co/workspace/Ataa~63ada002-c68a-4a77-a80a-072aa36a38f7/collection/18447671-66ef443e-1875-44ba-8e41-5508e1c6a73f?action=share&source=collection_link&creator=18447671"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user\": {\r\n        \"username\" : \"alya\",\r\n        \"email\" : \"alya@hotmail.com\",\r\n        \"password\" : \"12345\"\r\n    },\r\n    \"name\" : \"alya\",\r\n    \"role\" : \"student\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000//api/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"",
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Login 201",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user\": {\r\n        \"username\" : \"alya\",\r\n        \"email\" : \"alya@hotmail.com\",\r\n        \"password\" : \"12345\"\r\n    },\r\n    \"name\" : \"alya\",\r\n    \"role\" : \"student\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000//api/register",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"",
+								"api",
+								"register"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\n    \"user\": {\n        \"id\": 5,\n        \"user\": {\n            \"id\": 11,\n            \"username\": \"alya\",\n            \"email\": \"alya@hotmail.com\"\n        },\n        \"name\": \"alya\",\n        \"photo\": null,\n        \"role\": \"student\",\n        \"created\": \"2024-07-05T09:29:22.040504Z\",\n        \"updated\": \"2024-07-05T09:29:22.040504Z\"\n    },\n    \"token\": \"786c64b09068b9cd160ee0ed819f17b43b52d4e6\"\n}"
+				},
+				{
+					"name": "User_already_exist_400",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user\": {\r\n        \"username\" : \"omar_alloush\",\r\n        \"email\" : \"omar_alloush@hotmail.com\",\r\n        \"password\" : \"12345\"\r\n    },\r\n    // \"name\" : \"sami\",\r\n    \"photo\" : \"C:\\\\users\\\\todo\",\r\n    \"role\" : \"teacher\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000//api/register",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"",
+								"api",
+								"register"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\n    \"user\": {\n        \"username\": [\n            \"A user with that username already exists.\"\n        ]\n    },\n    \"name\": [\n        \"This field is required.\"\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"alya@hotmail.com\",\r\n    \"password\" : \"12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000//api/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"",
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Login_200",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"sisi@hotmail.com\",\r\n    \"password\" : \"12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000//api/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"",
+								"api",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"customer\": {\n        \"id\": 4,\n        \"user\": {\n            \"id\": 10,\n            \"username\": \"sisi\",\n            \"email\": \"sisi@hotmail.com\"\n        },\n        \"name\": \"sisi\",\n        \"photo\": \"C:\\\\users\\\\todo\",\n        \"role\": \"student\",\n        \"created\": \"2024-07-04T15:58:09.226979Z\",\n        \"updated\": \"2024-07-04T15:58:09.226979Z\"\n    },\n    \"token\": \"88dcf0109273f8e7bcbe9cb1c4b31e473a4e0dab\"\n}"
+				},
+				{
+					"name": "wrong_password_404",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"sisi@hotmail.com\",\r\n    \"password\" : \"123455\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000//api/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"",
+								"api",
+								"login"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\r\n    \"error\": \"wrong password\"\r\n}"
+				},
+				{
+					"name": "wrong_email_404",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"sissi@hotmail.com\",\r\n    \"password\" : \"12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000//api/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"",
+								"api",
+								"login"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n    \"detail\": \"No User matches the given query.\"\r\n}"
+				}
+			]
+		},
+		{
+			"name": "user_info",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 88dcf0109273f8e7bcbe9cb1c4b31e473a4e0dab",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000//api/users/details/4",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"",
+						"api",
+						"users",
+						"details",
+						"4"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "ok_200",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 88dcf0109273f8e7bcbe9cb1c4b31e473a4e0dab",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000//api/users/3",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"",
+								"api",
+								"users",
+								"3"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 3,\n    \"user\": {\n        \"id\": 9,\n        \"username\": \"omar_alloush\",\n        \"email\": \"omar_alloush@hotmail.com\"\n    },\n    \"name\": \"Omar alloush\",\n    \"photo\": \"C:\\\\users\\\\todo\",\n    \"role\": \"teacher\",\n    \"created\": \"2024-07-04T15:51:56.848941Z\",\n    \"updated\": \"2024-07-04T15:51:56.848941Z\"\n}"
+				},
+				{
+					"name": "not_found_404",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 88dcf0109273f8e7bcbe9cb1c4b31e473a4e0dab",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000//api/users/6",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"",
+								"api",
+								"users",
+								"6"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"detail\": \"No Customer matches the given query.\"\n}"
+				}
+			]
+		},
+		{
+			"name": "edit_customer",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 88dcf0109273f8e7bcbe9cb1c4b31e473a4e0dab",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"password\": \"112233\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000//api/users/details/4",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"",
+						"api",
+						"users",
+						"details",
+						"4"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "edit_name_role",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 88dcf0109273f8e7bcbe9cb1c4b31e473a4e0dab",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"photo\": \"Updated photo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000//api/users/details/4",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"",
+								"api",
+								"users",
+								"details",
+								"4"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 4,\n    \"user\": {\n        \"id\": 10,\n        \"username\": \"sisi\",\n        \"email\": \"sisi@hotmail.com\"\n    },\n    \"name\": \"Updated name\",\n    \"photo\": \"Updated photo\",\n    \"role\": \"Updated Role\",\n    \"created\": \"2024-07-04T15:58:09.226979Z\",\n    \"updated\": \"2024-07-04T18:15:01.554069Z\"\n}"
+				},
+				{
+					"name": "edit_password",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 88dcf0109273f8e7bcbe9cb1c4b31e473a4e0dab",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\": \"112233\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000//api/users/details/password/4",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"",
+								"api",
+								"users",
+								"details",
+								"password",
+								"4"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\r\n    \"message\": \"Password updated successfully\"\r\n}"
+				}
+			]
+		},
+		{
+			"name": "add_photo",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 786c64b09068b9cd160ee0ed819f17b43b52d4e6",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "photo",
+							"type": "file",
+							"src": "/C:/Users/Ossama/Desktop/1115159.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000//api/users/5/upload_photo",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"",
+						"api",
+						"users",
+						"5",
+						"upload_photo"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "add_photo_200",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 786c64b09068b9cd160ee0ed819f17b43b52d4e6",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "photo",
+									"type": "file",
+									"src": "/C:/Users/Ossama/Desktop/Screenshot 2022-11-30 155943.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000//api/users/5/upload_photo",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"",
+								"api",
+								"users",
+								"5",
+								"upload_photo"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 5,\n    \"user\": {\n        \"id\": 11,\n        \"username\": \"alya\",\n        \"email\": \"alya@hotmail.com\"\n    },\n    \"name\": \"alya\",\n    \"photo\": \"/media/photos/Screenshot_2022-11-30_155943.jpg\",\n    \"role\": \"student\",\n    \"created\": \"2024-07-05T09:29:22.040504Z\",\n    \"updated\": \"2024-07-05T09:51:03.189576Z\"\n}"
+				},
+				{
+					"name": "add_photo_400",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 786c64b09068b9cd160ee0ed819f17b43b52d4e6",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "photo",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000//api/users/5/upload_photo",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"",
+								"api",
+								"users",
+								"5",
+								"upload_photo"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": \"No photo provided\"\n}"
+				}
+			]
+		},
+		{
+			"name": "create_video",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 786c64b09068b9cd160ee0ed819f17b43b52d4e6",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "video",
+							"type": "file",
+							"src": "/C:/Users/Ossama/Desktop/لبنان.mp4"
+						},
+						{
+							"key": "user_id",
+							"value": "4",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000//api/files/create",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"",
+						"api",
+						"files",
+						"create"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "create_video",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 786c64b09068b9cd160ee0ed819f17b43b52d4e6",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "video",
+									"type": "file",
+									"src": []
+								},
+								{
+									"key": "user_id",
+									"value": "4",
+									"type": "text"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000//api/files/create",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"",
+								"api",
+								"files",
+								"create"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"file\": {\n        \"id\": 5,\n        \"video\": \"/media/videos/%D9%84%D8%A8%D9%86%D8%A7%D9%86_RnWRWgg.mp4\",\n        \"user_id\": 4\n    },\n    \"performance_metrics\": {\n        \"id\": 5,\n        \"speed_pace\": 1.0,\n        \"voice_variation\": 1.0,\n        \"pausing\": 1.0,\n        \"filler_words\": 1.0,\n        \"grammar\": 1.0,\n        \"language_variation\": 1.0,\n        \"script\": 1.0,\n        \"eye_contact_head_gaze\": 1.0,\n        \"gesture_use\": 1.0,\n        \"video\": 5,\n        \"user_id\": 4\n    }\n}"
+				},
+				{
+					"name": "missing_user_id_400",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 786c64b09068b9cd160ee0ed819f17b43b52d4e6",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"path\" : \"C:\\\\fsdf\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000//api/files/create",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"",
+								"api",
+								"files",
+								"create"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": \"user_id is required\"\n}"
+				},
+				{
+					"name": "user_not_found_404",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 786c64b09068b9cd160ee0ed819f17b43b52d4e6",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"path\" : \"C:\\\\fsdf\",\r\n    \"user_id\" : 45\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000//api/files/create",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"",
+								"api",
+								"files",
+								"create"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\r\n    \"detail\": \"No Customer matches the given query.\"\r\n}"
+				}
+			]
+		},
+		{
+			"name": "get_user_videos",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 786c64b09068b9cd160ee0ed819f17b43b52d4e6",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000//api/files/4/videos",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"",
+						"api",
+						"files",
+						"4",
+						"videos"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get_user_videos_empty",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 786c64b09068b9cd160ee0ed819f17b43b52d4e6",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000//api/files/5/videos",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"",
+								"api",
+								"files",
+								"5",
+								"videos"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "[]"
+				},
+				{
+					"name": "get_user_videos_user_not_exist",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 786c64b09068b9cd160ee0ed819f17b43b52d4e6",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000//api/files/8/videos",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"",
+								"api",
+								"files",
+								"8",
+								"videos"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\r\n    \"detail\": \"No Customer matches the given query.\"\r\n}"
+				},
+				{
+					"name": "get_user_videos_list",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 786c64b09068b9cd160ee0ed819f17b43b52d4e6",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000//api/files/4/videos",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"",
+								"api",
+								"files",
+								"4",
+								"videos"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 4,\n        \"video\": \"/media/videos/%D9%84%D8%A8%D9%86%D8%A7%D9%86.mp4\",\n        \"user_id\": 4\n    },\n    {\n        \"id\": 5,\n        \"video\": \"/media/videos/%D9%84%D8%A8%D9%86%D8%A7%D9%86_RnWRWgg.mp4\",\n        \"user_id\": 4\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "get_user_scores",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 786c64b09068b9cd160ee0ed819f17b43b52d4e6",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000//api/files/get_history/4",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"",
+						"api",
+						"files",
+						"get_history",
+						"4"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 786c64b09068b9cd160ee0ed819f17b43b52d4e6",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000//api/files/get_history/4",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"",
+								"api",
+								"files",
+								"get_history",
+								"4"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"speed_pace\": 1,\n        \"voice_variation\": 1,\n        \"pausing\": 1,\n        \"filler_words\": 1,\n        \"grammar\": 1,\n        \"language_variation\": 1,\n        \"script\": 1,\n        \"eye_contact_head_gaze\": 1,\n        \"gesture_use\": 1,\n        \"video\": {\n            \"id\": 1,\n            \"video\": null,\n            \"user_id\": 4\n        },\n        \"user_id\": 4\n    },\n    {\n        \"id\": 2,\n        \"speed_pace\": 1,\n        \"voice_variation\": 1,\n        \"pausing\": 1,\n        \"filler_words\": 1,\n        \"grammar\": 1,\n        \"language_variation\": 1,\n        \"script\": 1,\n        \"eye_contact_head_gaze\": 1,\n        \"gesture_use\": 1,\n        \"video\": {\n            \"id\": 2,\n            \"video\": null,\n            \"user_id\": 4\n        },\n        \"user_id\": 4\n    },\n    {\n        \"id\": 3,\n        \"speed_pace\": 1,\n        \"voice_variation\": 1,\n        \"pausing\": 1,\n        \"filler_words\": 1,\n        \"grammar\": 1,\n        \"language_variation\": 1,\n        \"script\": 1,\n        \"eye_contact_head_gaze\": 1,\n        \"gesture_use\": 1,\n        \"video\": {\n            \"id\": 3,\n            \"video\": null,\n            \"user_id\": 4\n        },\n        \"user_id\": 4\n    },\n    {\n        \"id\": 4,\n        \"speed_pace\": 1,\n        \"voice_variation\": 1,\n        \"pausing\": 1,\n        \"filler_words\": 1,\n        \"grammar\": 1,\n        \"language_variation\": 1,\n        \"script\": 1,\n        \"eye_contact_head_gaze\": 1,\n        \"gesture_use\": 1,\n        \"video\": {\n            \"id\": 4,\n            \"video\": \"/media/videos/%D9%84%D8%A8%D9%86%D8%A7%D9%86.mp4\",\n            \"user_id\": 4\n        },\n        \"user_id\": 4\n    },\n    {\n        \"id\": 5,\n        \"speed_pace\": 1,\n        \"voice_variation\": 1,\n        \"pausing\": 1,\n        \"filler_words\": 1,\n        \"grammar\": 1,\n        \"language_variation\": 1,\n        \"script\": 1,\n        \"eye_contact_head_gaze\": 1,\n        \"gesture_use\": 1,\n        \"video\": {\n            \"id\": 5,\n            \"video\": \"/media/videos/%D9%84%D8%A8%D9%86%D8%A7%D9%86_RnWRWgg.mp4\",\n            \"user_id\": 4\n        },\n        \"user_id\": 4\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "video_score",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 786c64b09068b9cd160ee0ed819f17b43b52d4e6",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000//api/files/video_score/4",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"",
+						"api",
+						"files",
+						"video_score",
+						"4"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "video_score",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 786c64b09068b9cd160ee0ed819f17b43b52d4e6",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000//api/files/video_score/4",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"",
+								"api",
+								"files",
+								"video_score",
+								"4"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\r\n    \"id\": 4,\r\n    \"speed_pace\": 1.0,\r\n    \"voice_variation\": 1.0,\r\n    \"pausing\": 1.0,\r\n    \"filler_words\": 1.0,\r\n    \"grammar\": 1.0,\r\n    \"language_variation\": 1.0,\r\n    \"script\": 1.0,\r\n    \"eye_contact_head_gaze\": 1.0,\r\n    \"gesture_use\": 1.0,\r\n    \"video\": {\r\n        \"id\": 4,\r\n        \"video\": \"/media/videos/%D9%84%D8%A8%D9%86%D8%A7%D9%86.mp4\",\r\n        \"user_id\": 4\r\n    },\r\n    \"user_id\": 4\r\n}"
+				}
+			]
+		}
+	]
+}
