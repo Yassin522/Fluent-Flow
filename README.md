@@ -28,4 +28,4 @@ Feel free to open issues and submit pull requests to improve FluentFlow. We welc
 
 
 ---
-Developed by ** Alya Almsouti-Hamza Mahrous-Osama BAzo-Yassin Abdulmahdi ** in collaboration with **Damascus University**.
+Developed by **[Alya Almsouti-Hamza Mahrous-Osama BAzo-Yassin Abdulmahdi]** in collaboration with **Damascus University**.
