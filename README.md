@@ -22,10 +22,5 @@ FluentFlow is a web application designed to assist users in enhancing their publ
 - **Frontend:** Built the user interface using Flutter.
 - **Backend:** Developed the server-side logic with Django.
 
-
-## Contribution
-Feel free to open issues and submit pull requests to improve FluentFlow. We welcome contributions from the community!
-
-
 ---
 Developed by **[Alya Almsouti-Hamza Almahrous-Osama Bazo-Yassin Abdulmahdi]** in collaboration with **Damascus University**.
