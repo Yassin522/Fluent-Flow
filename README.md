@@ -23,7 +23,7 @@ FluentFlow is a web application designed to assist users in enhancing their publ
 - **Backend:** Developed the server-side logic with Django.
 
 ---
-Developed by **[Alya Almsouti-Hamza Almahrous-Osama Bazo-Yassin Abdulmahdi]** in collaboration with **Damascus University**.
+Developed by **[Alya Almsouti - Hamza Almahrous - Osama Bazo - Yassin Abdulmahdi]** in collaboration with **Damascus University**.
 ---
 
 ## Demo
